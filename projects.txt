@@ -3,32 +3,6 @@
 
 ====================================
 
-* Features of C  src="https://www.interviewbit.com/blog/c-projects/"
-
-  * C Projects For Beginners:
-    1. Simple Calculator
-    2. Student Record management system
-    3. Calendar
-    4. Mini project for phone book
-    5. Unit converter
-
-  * Intermediate C Projects :
-    6. Mini Voting System
-    7. Tic-tac-toe Game
-    8. Matrix Calculator
-    9. Library Management System
-    10. Electricity Bill Calculator
-    11. Movie Ticket Booking System
-
-  * Advanced C Projects :
-    12. Snakes and Ladders Game
-    13. Lexical Analyzer
-    14. Bus Reservation System
-    15. Dino Game
-    16. Pac-Man Game
-
-====================================
-
 * Features of C++ 
 
   * C++ Projects for Beginners :
@@ -144,58 +118,5 @@
     27. Face Mask Detection
     28. Plagiarism Checker
     29. Music Player
-
-====================================
-
-* Features of PHP  src="https://www.interviewbit.com/blog/php-projects/"
-
-  * PHP Projects for Beginners :
-    1. A Chatbot for Students
-    2. Portal for Doctors
-    3. Clothes Recommendation System
-    4. Product Rating System as per the Consumer Reviews
-    5. Automatic Time Table Creation
-
-  * Intermediate PHP Projects :
-    6. Ad Dispenser Server
-    7. Movie Recommendation App
-    8. Predictive Model for Customer Behavior
-    9. Image Processing and Generation
-
-  * Advanced PHP Projects :
-    10. E-Commerce Website
-    11. Online Shopping Project
-    12. Social Networking Website
-    13. Online Blood Bank
-    14. Online Voting System
-    15. WordPress Plugins
-
-====================================
-
-* Features of Javascript  src="https://www.interviewbit.com/blog/javascript-projects/"
-
-  * JavaScript Projects for Beginners :
-    1. JavaScript Calculator
-    2. Build a Clock using JavaScript
-    3. Hex Color Application
-    4.Random Quote Generator
-    5. Tip Calculator
-    6. Timer
-    7. Grocery List
-    8. BMI Calculator
-    9. Tic-Tac-Toe Game
-
-  * Intermediate JavaScript Projects :
-    10. Happy Bouncing Balls
-    11. JavaScript Form Validation
-    12. Guess the number game
-    13. Whack-a-mole game
-    14. Rock Paper Scissors game
-
-  * Advanced JavaScript Projects :
-    15. Real-time Weather app
-    16. Movie App
-    17. Real-Time Chat Application
-    18. File Sharing App
 
 ====================================
