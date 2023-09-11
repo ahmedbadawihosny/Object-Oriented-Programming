@@ -158,7 +158,7 @@ enum isWord{ YES, NO };
   My number is (212) 767-8900
   Your number is (415) 555-1212
 ```
-[solution](./exercises/1-phone_number.cpp)
+[solution](./exercises/ex4_1.cpp)
 
 <br>
 
@@ -168,11 +168,11 @@ enum isWord{ YES, NO };
     Enter coordinates for p2: 5 7
     Coordinates of p1+p2 are: 8, 11
   ```
-[solution](./exercises)
+[solution](./exercises/ex4_2.cpp)
 
 <br>
 
-  3. Create a structure called Volume that uses three variables of type Distance (from the ENGLSTRC example) to model the volume of a room. Initialize a variable of type Volume to specific dimensions, then calculate the volume it represents, and print out the result. To calculate the volume, convert each dimension from a Distance variable to a variable of type float representing feet and fractions of a foot, and then multiply the resulting three numbers. [solution](./exercises)
+  3. Create a structure called Volume that uses three variables of type Distance (from the ENGLSTRC example) to model the volume of a room. Initialize a variable of type Volume to specific dimensions, then calculate the volume it represents, and print out the result. To calculate the volume, convert each dimension from a Distance variable to a variable of type float representing feet and fractions of a foot, and then multiply the resulting three numbers. [solution](./exercises/ex4_3.cpp)
 
 
 <br>
