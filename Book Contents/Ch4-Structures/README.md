@@ -27,9 +27,87 @@
 
 ## 4.1 Structures
 
+  <!-- <p align="center">
+  <img src="../../img/Images for the book contact/ch1/FIGURE 1.4.png" width ="500">
+  </p> -->
+
+- ### A Simple Structure 
+
+<br>
+
+- ### Defining the Structure 
+
+<br>
+
+- ### Defining a Structure Variable 
+
+<br>
+
+- ### Accessing Structure Members
+
+<br>
+
+- ### Other Structure Features 
+
+<br>
+
+- ### A Measurement Example 
+
+
+- ### Structures Within Structures 
+
+<br>
+
+- ### A Card Game Example 
+
+<br>
+
+- ### Structures and Classes
+
 <br>
 
 ## 4.2 Enumerations
+
+  <!-- <p align="center">
+  <img src="../../img/Images for the book contact/ch1/FIGURE 1.4.png" width ="500">
+  </p> -->
+
+
+- ### Days of the Week
+
+<br>
+
+- #### One Thing or Another 
+
+<br>
+
+- ### Organizing the Cards
+
+<br>
+
+- ### Specifying Integer Values 
+
+<br>
+
+- ### Not Perfect
+
+<br>
+
+- ### Other Examples
+
+
+<br>
+
+
+## Summary
+
+  - We’ve covered two topics in this chapter: structures and enumerations. Structures are an important component of C++, since their syntax is the same as that of classes.
+
+  - classes are nothing more than structures that include functions.
+
+  - Structures are typically used to group several data items together to form a single entity.
+
+- The Difference between structures and classes:
 
 <br>
 
@@ -64,7 +142,21 @@ Structure:
    };
 ```
 
-## Summary
+> [geeksforgeeks](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)
+
+<br>
+
+  - An enumeration is a programmer-defined type that is limited to a fixed list of values.
+
+  - Internally the compiler treat enumeration variables as integers.
+
+  - Structures should not be confused with enumerations. 
+
+  - Structures are a powerful and flexible way of grouping a diverse collection of data into a single entity.
+
+  - An enumeration allows the definition of variables that can take on a fixed set of values that are listed (enumerated) in the type’s declaration.
+
+<br>
 
 ## Questions
 
