@@ -1,14 +1,7 @@
 #include <iostream>
 using namespace std;
 
-struct my_phone_number
-{
-  int area_code; 
-  int exchange;
-  int number;
-};
-
-struct user_phone_number
+struct phone
 {
   int area_code; 
   int exchange;
@@ -17,9 +10,9 @@ struct user_phone_number
 
 int main()
 {
-  my_phone_number my_number = {212 , 767, 8900};
+  phone my_number = {212 , 767, 8900};
 
-  user_phone_number user_number;
+  phone user_number;
 
   cout<<"--------------------------------------------\n";
   cout<<"Enter your area code, exchange, and number: \n";
