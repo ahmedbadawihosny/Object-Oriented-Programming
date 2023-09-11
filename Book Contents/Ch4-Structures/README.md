@@ -68,6 +68,87 @@ Structure:
 
 ## Questions
 
+1. A structure brings together a group of ` related data items` and `variables`.
+2. True or false: A structure and a class use similar syntax. `true`.
+3. The closing brace of a structure is followed by a `semicolon`.
+4. Write a structure specification that includes three variables—all of type int—called hrs, mins, and secs. Call this structure time.
+
+the soulution: 
+```cpp
+ struct time 
+ {
+   int hrs;
+   int mins;
+   int secs;
+ };
+```
+5. True or false: A structure definition creates space in memory for a variable. `false; only a variable definition creates space in memory`
+
+6. When accessing a structure member, the identifier to the left of the dot operator is the
+name of `a structure variable.`.
+
+7. Write a statement that sets the hrs member of the time2 structure variable equal to 11.
+
+```cpp
+time2.hrs = 11;
+```
+
+8. If you have three variables defined to be of type struct time, and this structure contains three int members, how many bytes of memory do the variables use together? `18 in 16-bit systems (3 structures times 3 integers times 2 bytes), or 36 in 32-bit systems (3 * 4 == 32)`
+
+9. Write a definition that initializes the members of time1 which is a variable of type struct time, as defined in Question 4 to hrs = 11, mins = 10, secs = 59.
+
+```cpp
+  time time1 = {11, 10 ,59};
+```
+10. True or false: You can assign one structure variable to another, provided they are of the same type. `true`
+
+11. Write a statement that sets the variable temp equal to the paw member of the dogs member of the fido variable.
+
+```cpp
+temp = fido.dogs.paw;
+```
+
+12. An enumeration brings together a group of `integers with user-defined names`.
+
+13. Write a statement that declares an enumeration called players with the values B1, B2, SS, B3, RF, CF, LF, P, and C.
+
+```cpp
+enum players {B1, B2, SS, B3, RF, CF, LF, P, C};
+```
+
+14. Assuming the enum type players as declared in Question 13, define two variables joe and tom, and assign them the values LF and P, respectively.
+
+```cpp
+players joe , tom;
+joe = LF;
+tom = P;
+```
+
+15. Assuming the statements of Questions 13 and 14, state whether each of the following statements is legal.
+```
+a. ==> No
+b. ===> yes
+c. ===> no
+d. ===> yes
+```
+
+16. The first three enumerators of an enum type are normally represented by the values
+`0`, `1`, and `2`.
+
+17. Write a statement that declares an enumeration called speeds with the enumerators obsolete, single, and album. Give these three names the integer values 78, 45, and 33.
+
+```cpp
+enum speeds {obsolete = 78, single = 45, album = 33};
+```
+18. State the reason that
+```
+enum isWord{ NO, YES };
+
+is better than
+
+enum isWord{ YES, NO };
+```
+`false because should be represented by 0`
 
 ## Exercises
 
@@ -77,6 +158,7 @@ Structure:
   My number is (212) 767-8900
   Your number is (415) 555-1212
 ```
+[solution](./exercises/1-phone_number.cpp)
 
 <br>
 
@@ -86,60 +168,61 @@ Structure:
     Enter coordinates for p2: 5 7
     Coordinates of p1+p2 are: 8, 11
   ```
+[solution](./exercises)
 
 <br>
 
-  3. Create a structure called Volume that uses three variables of type Distance (from the ENGLSTRC example) to model the volume of a room. Initialize a variable of type Volume to specific dimensions, then calculate the volume it represents, and print out the result. To calculate the volume, convert each dimension from a Distance variable to a variable of type float representing feet and fractions of a foot, and then multiply the resulting three numbers.
-
-
-<br>
-
-
-  4. Create a structure called employee that contains two members: an employee number (type int) and the employee’s compensation (in dollars; type float). Ask the user to fill in this data for three employees, store it in three variables of type struct employee, and then display the information for each employee.
+  3. Create a structure called Volume that uses three variables of type Distance (from the ENGLSTRC example) to model the volume of a room. Initialize a variable of type Volume to specific dimensions, then calculate the volume it represents, and print out the result. To calculate the volume, convert each dimension from a Distance variable to a variable of type float representing feet and fractions of a foot, and then multiply the resulting three numbers. [solution](./exercises)
 
 
 <br>
 
 
-  5. Create a structure of type date that contains three members: the month, the day of the month, and the year, all of type int. (Or use day-month-year order if you prefer.) Have the user enter a date in the format 12/31/2001, store it in a variable of type struct date, then retrieve the values from the variable and print them out in the same format.
+  4. Create a structure called employee that contains two members: an employee number (type int) and the employee’s compensation (in dollars; type float). Ask the user to fill in this data for three employees, store it in three variables of type struct employee, and then display the information for each employee. [solution](./exercises)
 
 
 <br>
 
 
-  6. We said earlier that C++ I/O statements don’t automatically understand the data types of enumerations. Instead, the (>>) and (<<) operators think of such variables simply as integers. You can overcome this limitation by using switch statements to translate between the user’s way of expressing an enumerated variable and the actual values of the enumerated variable. For example, imagine an enumerated type with values that indicate an employee type within an organization: enum etype { laborer, secretary, manager, accountant, executive, researcher }; Write a program that first allows the user to specify a type by entering its first letter (‘l’, ‘s’, ‘m’, and so on), then stores the type chosen as a value of a variable of type enum etype, and finally displays the complete word for this type. Enter employee type (first letter only) laborer, secretary, manager, accountant, executive, researcher a Employee type is accountant. You’ll probably need two switch statements: one for input and one for output.
+  5. Create a structure of type date that contains three members: the month, the day of the month, and the year, all of type int. (Or use day-month-year order if you prefer.) Have the user enter a date in the format 12/31/2001, store it in a variable of type struct date, then retrieve the values from the variable and print them out in the same format. [solution](./exercises)
 
 
 <br>
 
 
-  7. Add a variable of type enum etype (see Exercise 6), and another variable of type struct date (see Exercise 5) to the employee class of Exercise 4. Organize the resulting program so that the user enters four items of information for each of three employees: an employee number, the employee’s compensation, the employee type, and the date of first employment. The program should store this information in three variables of type employee, and then display their contents.
+  6. We said earlier that C++ I/O statements don’t automatically understand the data types of enumerations. Instead, the (>>) and (<<) operators think of such variables simply as integers. You can overcome this limitation by using switch statements to translate between the user’s way of expressing an enumerated variable and the actual values of the enumerated variable. For example, imagine an enumerated type with values that indicate an employee type within an organization: enum etype { laborer, secretary, manager, accountant, executive, researcher }; Write a program that first allows the user to specify a type by entering its first letter (‘l’, ‘s’, ‘m’, and so on), then stores the type chosen as a value of a variable of type enum etype, and finally displays the complete word for this type. Enter employee type (first letter only) laborer, secretary, manager, accountant, executive, researcher a Employee type is accountant. You’ll probably need two switch statements: one for input and one for output. [solution](./exercises)
 
 
 <br>
 
 
-  8. Start with the fraction-adding program of Exercise 9 in Chapter 2, “C++ Programming Basics.” This program stores the numerator and denominator of two fractions before adding them, and may also store the answer, which is also a fraction. Modify the program so that all fractions are stored in variables of type struct fraction, whose two members are the fraction’s numerator and denominator (both type int). All fractionrelated data should be stored in structures of this type.
+  7. Add a variable of type enum etype (see Exercise 6), and another variable of type struct date (see Exercise 5) to the employee class of Exercise 4. Organize the resulting program so that the user enters four items of information for each of three employees: an employee number, the employee’s compensation, the employee type, and the date of first employment. The program should store this information in three variables of type employee, and then display their contents. [solution](./exercises)
 
 
 <br>
 
 
-  9. Create a structure called time. Its three members, all type int, should be called hours, minutes, and seconds. Write a program that prompts the user to enter a time value in hours, minutes, and seconds. This can be in 12:59:59 format, or each number can be entered at a separate prompt (“Enter hours:”, and so forth). The program should then store the time in a variable of type struct time, and finally print out the total number of seconds represented by this time value: `long totalsecs = t1.hours*3600 + t1.minutes*60 + t1.seconds`.
+  8. Start with the fraction-adding program of Exercise 9 in Chapter 2, “C++ Programming Basics.” This program stores the numerator and denominator of two fractions before adding them, and may also store the answer, which is also a fraction. Modify the program so that all fractions are stored in variables of type struct fraction, whose two members are the fraction’s numerator and denominator (both type int). All fractionrelated data should be stored in structures of this type. [solution](./exercises)
 
 
 <br>
 
 
-  10. Create a structure called sterling that stores money amounts in the old-style British system discussed in Exercises 8 and 11 in Chapter 3, “Loops and Decisions.” The members could be called pounds, shillings, and pence, all of type int. The program should ask the user to enter a money amount in new-style decimal pounds (type double), convert it to the old-style system, store it in a variable of type struct sterling, and then display this amount in pounds-shillings-pence format.
+  9. Create a structure called time. Its three members, all type int, should be called hours, minutes, and seconds. Write a program that prompts the user to enter a time value in hours, minutes, and seconds. This can be in 12:59:59 format, or each number can be entered at a separate prompt (“Enter hours:”, and so forth). The program should then store the time in a variable of type struct time, and finally print out the total number of seconds represented by this time value: `long totalsecs = t1.hours*3600 + t1.minutes*60 + t1.seconds`. [solution](./exercises)
 
 
 <br>
 
 
-  11. Use the time structure from Exercise 9, and write a program that obtains two time values from the user in 12:59:59 format, stores them in struct time variables, converts each one to seconds (type int), adds these quantities, converts the result back to hoursminutes-seconds, stores the result in a time structure, and finally displays the result in 12:59:59 format.
+  10. Create a structure called sterling that stores money amounts in the old-style British system discussed in Exercises 8 and 11 in Chapter 3, “Loops and Decisions.” The members could be called pounds, shillings, and pence, all of type int. The program should ask the user to enter a money amount in new-style decimal pounds (type double), convert it to the old-style system, store it in a variable of type struct sterling, and then display this amount in pounds-shillings-pence format. [solution](./exercises)
+
 
 <br>
 
 
-  12. Revise the four-function fraction calculator program of Exercise 12 in Chapter 3 so that each fraction is stored internally as a variable of type struct fraction, as discussed in Exercise 8 in this chapter
+  11. Use the time structure from Exercise 9, and write a program that obtains two time values from the user in 12:59:59 format, stores them in struct time variables, converts each one to seconds (type int), adds these quantities, converts the result back to hoursminutes-seconds, stores the result in a time structure, and finally displays the result in 12:59:59 format. [solution](./exercises)
+
+<br>
+
+
+  12. Revise the four-function fraction calculator program of Exercise 12 in Chapter 3 so that each fraction is stored internally as a variable of type struct fraction, as discussed in Exercise 8 in this chapter. [solution](./exercises)
