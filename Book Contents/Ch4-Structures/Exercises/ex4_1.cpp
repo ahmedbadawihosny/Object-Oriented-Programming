@@ -16,8 +16,11 @@ int main()
 
   cout<<"--------------------------------------------\n";
   cout<<"Enter your area code, exchange, and number: \n";
+  cout<<"Enter your area code : ";
   cin>>user_number.area_code;
+  cout<<"Enter your exchange : ";
   cin>>user_number.exchange;
+  cout<<"Enter your and number: ";
   cin>>user_number.number;
   cout<<"--------------------------------------------\n";
   cout<<"My number is "<<"("<<my_number.area_code<<") "
