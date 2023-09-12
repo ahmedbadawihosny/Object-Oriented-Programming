@@ -69,12 +69,69 @@
 
 ## 4.2 Enumerations
 
-  <!-- <p align="center">
-  <img src="../../img/Images for the book contact/ch1/FIGURE 1.4.png" width ="500">
-  </p> -->
-
+  As we’ve seen, structures can be looked at as a way to provide user-defined data types. A different approach to defining your own data type is the enumeration.
 
 - ### Days of the Week
+
+  Enumerated types work when you know in advance a finite (usually short) list of values that a
+  data type can take on, like in this example:
+
+  ```cpp
+  // dayenum.cpp
+  // demonstrates enum types
+  #include <iostream>
+  using namespace std;
+  //specify enum type
+  enum days_of_week { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
+
+  int main()
+  {
+  days_of_week day1, day2; //define variables
+  //of type days_of_week
+  day1 = Mon; //give values to
+  day2 = Thu; //variables
+  int diff = day2 - day1; //can do integer arithmetic
+  cout << “Days between = “ << diff << endl;
+  if(day1 < day2) //can do comparisons
+  cout << “day1 comes before day2\n”;
+  return 0;
+  }
+  ```
+  An enum declaration defines the set of all names that will be permissible values of the type.
+
+  These permissible values are called enumerators.
+
+  This picture shows the syntax of an enum declaration:
+
+  <p align="center">
+  <img src="../../img/Images for the book contact/ch4/FIGURE 4.8.png" width ="500">
+  </p>
+
+  > An enumeration is a list of all possible values. 
+
+  In an enum you must give a specific name to every possible value, the next picture shows the difference between an int and an enum:
+
+  <p align="center">
+  <img src="../../img/Images for the book contact/ch4/FIGURE 4.9.png" width ="500">
+  </p> 
+
+  Variables of an enumerated type, like day1 and day2, can be given any of the values listed in the enum declaration.
+
+  You can’t use values that weren’t listed in the declaration. Such statements as:
+
+  ```cpp
+  day1 = halloween;
+  // are illegal
+  ```
+
+  The use of arithmetic and relational operators doesn’t make much sense with some enum types. For example, if you have the declaration : enum pets { cat, dog, hamster, canary, ocelot };
+  then it may not be clear what expressions like dog + canary or (cat < hamster) mean. Enumerations are treated internally as integers.
+
+  Ordinarily the first name in the list is given the value 0, the next name is given the value 1, and so on.
+
+  Arithmetic operations on enum types take place on the integer values. 
+
+  you must be careful of trying to take advantage of this fact. If you say ( day1 = 5; ) ,the compiler will issue a warning.
 
 <br>
 
@@ -88,17 +145,46 @@
 
 - ### Specifying Integer Values 
 
+  We said that in an enum declaration the first enumerator was given the integer value 0, the second the value 1, and so on. This ordering can be altered by using an equal sign to specify a starting point other than 0.
+  like in this example:
+
+  ```cpp
+  enum Suit { clubs=1, diamonds, hearts, spades };
+  ```
+
+  >Subsequent names are given values starting at this point, so diamonds is 2, hearts is 3, and spades is 4. Actually you can use an equal sign to give a specified value to any enumerator.
+
 <br>
 
 - ### Not Perfect
+
+  One annoying aspect of enum types is that they are not recognized by C++ input/output (I/O) statements. As an example:
+
+  ```cpp
+  enum direction { north, south, east, west };
+  direction dir1 = south;
+  cout << dir1;
+  ```
 
 <br>
 
 - ### Other Examples
 
+  Here are some other examples of enumerated data declarations, to give you a feeling for possible uses of this feature:
+
+  ```cpp
+  enum months { Jan, Feb, Mar, Apr, May, Jun,Jul, Aug, Sep, Oct, Nov, Dec };
+
+  enum switch { off, on };
+
+  enum meridian { am, pm };
+
+  enum chess { pawn, knight, bishop, rook, queen, king };
+
+  enum coins { penny, nickel, dime, quarter, half_dollar, dollar };
+  ```
 
 <br>
-
 
 ## Summary
 
@@ -108,42 +194,42 @@
 
   - Structures are typically used to group several data items together to form a single entity.
 
-- The Difference between structures and classes:
+  - The Difference between structures and classes:
 
 <br>
 
-| Class  | Structure |
-| :----: | :------: |
-| 1. Members of a class are private by default. | 1. Members of a structure are public by default. |
-| 2. An instance of a class is called an ‘object’.| 2. An instance of structure is called the ‘structure variable’. |
-| 3. Member classes/structures of a class are private by default but not all programming languages have this default behavior eg Java etc.| 3. Member classes/structures of a structure are public by default. |
-| 4. It is declared using the class keyword.| 4. It is declared using the struct keyword. |
-| 5. It is normally used for data abstraction and further inheritance.| 5. It is normally used for the grouping of data |
-| 6. NULL values are possible in Class. | 6. NULL values are not possible. |
-| 7. Syntax: | 7. Syntax: |
+  | Class  | Structure |
+  | :----: | :------: |
+  | 1. Members of a class are private by default. | 1. Members of a structure are public by default. |
+  | 2. An instance of a class is called an ‘object’.| 2. An instance of structure is called the ‘structure variable’. |
+  | 3. Member classes/structures of a class are private by default but not all programming languages have this default behavior eg Java etc.| 3. Member classes/structures of a structure are public by default. |
+  | 4. It is declared using the class keyword.| 4. It is declared using the struct keyword. |
+  | 5. It is normally used for data abstraction and further inheritance.| 5. It is normally used for the grouping of data |
+  | 6. NULL values are possible in Class. | 6. NULL values are not possible. |
+  | 7. Syntax: | 7. Syntax: |
 
-class:
+  class:
 
- ```cpp
-class class_name{
-  data_member;
-  member_function;
-  };
-```
+  ```cpp
+  class class_name{
+    data_member;
+    member_function;
+    };
+  ```
 
-Structure:
+  Structure:
 
-```cpp
-   struct structure_name{
+  ```cpp
+    struct structure_name{
 
-         type structure_member1;
+          type structure_member1;
 
-         type structure_member2;
+          type structure_member2;
 
-   };
-```
+    };
+  ```
 
-> [geeksforgeeks](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)
+  > [geeksforgeeks](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)
 
 <br>
 
