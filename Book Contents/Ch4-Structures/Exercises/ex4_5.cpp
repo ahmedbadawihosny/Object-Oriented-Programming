@@ -15,7 +15,12 @@ int main()
 
   cout<<"-------------------------------------------- \n";
   cout<<"Enter The date in the format month/day/year\n";
-  cin>>user_data.month>>s>>user_data.day>>s>>user_data.year;
+  cout<<"Enter The date in month : ";
+  cin>>user_data.month;
+  cout<<"Enter The date in day : ";
+  cin>>user_data.day;
+  cout<<"Enter The date in year : ";
+  cin>>user_data.year;
   
   cout<<"The Date is : "<<user_data.month<<"/"<<user_data.day<<"/"<<user_data.year<<"\n";
   cout<<"-------------------------------------------- \n";
