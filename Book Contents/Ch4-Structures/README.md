@@ -137,9 +137,125 @@
 
 - #### One Thing or Another 
 
+  Our next example counts the words in a phrase typed in by the user  This
+  example shows an enumeration with only two enumerators like this example :
+
+  <p align="center">
+  <img src="../../img/Images for the book contact/ch4/FIGURE 4.10.png" width ="500">
+  </p> 
+
+<br>
+
+  ```cpp
+  // wdcount.cpp
+  // demonstrates enums, counts words in phrase
+  #include <iostream>
+  #include <conio.h> //for getche()
+  using namespace std;
+
+  enum itsaWord { NO, YES }; //NO=0, YES=1
+
+  int main()
+  {
+  itsaWord isWord = NO; //YES when in a word, NO when in whitespace
+  char ch = ‘a’; //character read from keyboard
+  int wordcount = 0; //number of words read
+  cout << “Enter a phrase:\n”;
+
+  do {
+  ch = getche(); //get character
+  if(ch==’ ‘ || ch==’\r’) //if white space,
+  {
+  if( isWord == YES ) //and doing a word,
+  { //then it’s end of word
+  wordcount++; //count the word
+  isWord = NO; //reset flag
+  }
+  } //otherwise, it’s
+  else //normal character
+  if( isWord == NO ) //if start of word,
+  isWord = YES; //then set flag
+  } while( ch != ‘\r’ ); //quit on Enter key
+
+  cout << “\n---Word count is “ << wordcount << “---\n”;
+  return 0;
+  }
+  ```
+
+  >The program cycles in a do loop, reading characters from the keyboard.
+
 <br>
 
 - ### Organizing the Cards
+  Here’s final example of enum types organizing the cards: 
+
+  ```cpp
+  // cardenum.cpp
+  // demonstrates enumerations
+  #include <iostream>
+  using namespace std;
+
+  const int jack = 11; //2 through 10 are unnamed integers
+  const int queen = 12;
+  const int king = 13;
+  const int ace = 14;
+  enum Suit { clubs, diamonds, hearts, spades };
+  ////////////////////////////////////////////////////////////////
+  struct card
+  {
+  int number; //2 to 10, jack, queen, king, ace
+  Suit suit; //clubs, diamonds, hearts, spades
+  };
+  ////////////////////////////////////////////////////////////////
+  int main()
+  {
+  card temp, chosen, prize; //define cards
+  int position;
+
+  card card1 = { 7, clubs }; //initialize card1
+  cout << “Card 1 is the seven of clubs\n”;
+  card card2 = { jack, hearts }; //initialize card2
+
+  cout << “Card 2 is the jack of hearts\n”;
+  card card3 = { ace, spades }; //initialize card3
+
+  cout << “Card 3 is the ace of spades\n”;
+  prize = card3; //copy this card, to remember it
+
+  cout << “I’m swapping card 1 and card 3\n”;
+  temp = card3; card3 = card1; card1 = temp;
+
+  cout << “I’m swapping card 2 and card 3\n”;
+  temp = card3; card3 = card2; card2 = temp;
+
+  cout << “I’m swapping card 1 and card 2\n”;
+  temp = card2; card2 = card1; card1 = temp;
+  cout << “Now, where (1, 2, or 3) is the ace of spades? “;
+  cin >> position;
+
+  switch (position)
+  {
+  case 1: chosen = card1; break;
+  case 2: chosen = card2; break;
+  case 3: chosen = card3; break;
+  }
+
+  if(chosen.number == prize.number &&  chosen.suit == prize.suit)  //compare cards
+  cout << “That’s right! You win!\n”;
+  else
+  cout << “Sorry. You lose.\n”;
+  
+  return 0;
+  }
+  ```
+
+  ```
+  If You write this line :
+
+  card1.suit = 5;
+
+  result in warnings from the compiler.
+  ```
 
 <br>
 
