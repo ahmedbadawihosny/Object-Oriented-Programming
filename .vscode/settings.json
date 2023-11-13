@@ -60,5 +60,9 @@
     "ostream": "cpp",
     "istream": "cpp"
   },
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "java.project.sourcePaths": [
+    "oop-exercises/My Idea/person/task",
+    "oop-exercises/My Idea/person"
+  ]
 }
