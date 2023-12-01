@@ -1,4 +1,4 @@
-<h1 align="center"> <bold>MY C++ LEARNING JOURNEY</bold> </h1>
+<h1 align="center"> <bold>MY OOP LEARNING JOURNEY</bold> </h1>
 
 <br>
 
