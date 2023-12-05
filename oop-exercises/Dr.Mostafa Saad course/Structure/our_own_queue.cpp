@@ -55,10 +55,10 @@ int main()
   my_queue.add_end(30);
   my_queue.print_queue();
 
-  // my_queue.add_front(1);
-  // my_queue.add_front(4);
-  // my_queue.print_queue();
+  my_queue.add_front(1);
+  my_queue.add_front(4);
+  my_queue.print_queue();
 
-  // cout<<my_queue.remove_value();
+  cout<<my_queue.remove_value();
   return 0;
 }
